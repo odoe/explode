@@ -9,12 +9,13 @@ describe('explode geometries', () => {
   it('will explode polygon geometry', () => {
     const polygon = new Polygon({
       rings: [
-        [-64.78, 32.3],
-        [-66.07, 18.45],
-        [-80.21, 25.78],
-        [-64.78, 32.3],
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      ] as any,
+        [
+          [-64.78, 32.3],
+          [-66.07, 18.45],
+          [-80.21, 25.78],
+          [-64.78, 32.3],
+        ]
+      ],
     });
     const lines = explode(polygon);
     expect(lines.length).to.equal(3);

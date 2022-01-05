@@ -39,8 +39,7 @@ function explodePolygon(geometry: Polygon): Polyline[] {
       const y = rings[j + 1];
       if (x && y) {
         const line = new Polyline({
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          paths: [x, y] as any, // bad typing?
+          paths: [[x, y]],
         });
         geometries.push(line);
       }
