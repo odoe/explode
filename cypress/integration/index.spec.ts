@@ -14,7 +14,7 @@ describe('explode geometries', () => {
           [-66.07, 18.45],
           [-80.21, 25.78],
           [-64.78, 32.3],
-        ]
+        ],
       ],
     });
     const lines = explode(polygon);
