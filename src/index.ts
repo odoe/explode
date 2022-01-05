@@ -35,11 +35,11 @@ function explodePolygon(geometry: Polygon): Polyline[] {
   for (let i = 0; i < geometry.rings?.length; i++) {
     const rings = geometry.rings[i];
     for (let j = 0; j < rings?.length; j++) {
-      const x = rings[j];
-      const y = rings[j + 1];
-      if (x && y) {
+      const start = rings[j];
+      const end = rings[j + 1];
+      if (start && end) {
         const line = new Polyline({
-          paths: [[x, y]],
+          paths: [[start, end]],
         });
         geometries.push(line);
       }
